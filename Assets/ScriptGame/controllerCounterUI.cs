@@ -10,4 +10,9 @@ public class controllerCounterUI : MonoBehaviour
     {
         GetComponent<Text>().text = "x" + GameController.instance.counterPlayerDropBoxUI;
     }
+    public void printEnd()
+    {
+        print("End");
+        GetComponent<Text>().text = "END";
+    }
 }

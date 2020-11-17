@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class BoxMove : MonoBehaviour
 {
-    public BoxSpawn spawnBox;
-
-    public float leftPositionMin = -2f, rightpositionMax = 2f, moveSpeedBox = 2f;
-    public int minSpeedDown = 2, maxSpeedDown = 4;
-    public bool moveBoxYesOrNot;
-
-    private Rigidbody2D rigidBody2D;
-
+    private float min_X = -2.2f, max_X = 2.2f, move_Speed = 2f;
+    private bool canMove, gameOver, ignoreCollision, ignoreTrigger;
+    private Rigidbody2D myBody;
+    public BoxScript currentBox;
     private void Awake()
     {
-        rigidBody2D = GetComponent<Rigidbody2D>();
-        rigidBody2D.gravityScale = 0f;
-        moveBoxYesOrNot = true;
+        myBody = GetComponent<Rigidbody2D>();
+        myBody.gravityScale = 0f;
     }
     private void Start()
     {
+        canMove = true;
         if (Random.Range(0, 2) > 0)
         {
-            moveSpeedBox *= -1f;
+            move_Speed *= -1f;
         }
-        spawnBox.SpawnBox();
+        //GameController.instance.currentBox = this;
     }
     private void Update()
     {
@@ -32,24 +28,24 @@ public class BoxMove : MonoBehaviour
     }
     void MoveBox()
     {
-        if (moveBoxYesOrNot)
+        if (canMove)
         {
             Vector2 temp = transform.position;
-            temp.x += moveSpeedBox * Time.deltaTime;
-            if (temp.x > rightpositionMax)
+            temp.x += move_Speed * Time.deltaTime;
+            if (temp.x > max_X)
             {
-                moveSpeedBox *= -1f;
+                move_Speed *= -1f;
             }
-            else if (temp.x < leftPositionMin)
+            else if (temp.x < min_X)
             {
-                moveSpeedBox *= -1f;
+                move_Speed *= -1f;
             }
             transform.position = temp;
         }
     }
     public void DropBox()
     {
-        moveBoxYesOrNot = false;
-        rigidBody2D.gravityScale = Random.Range(minSpeedDown, maxSpeedDown);
+        canMove = false;
+        myBody.gravityScale = Random.Range(2, 4);
     }
 }

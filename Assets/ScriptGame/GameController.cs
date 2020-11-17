@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     public BoxScript currentBox;
     private int moveCount, touch;
     public int counterPlayerDropBoxUI;
-    private float cameraCounter = 6f, spawnPositionCounter = 10f;
+    private float cameraCounter, spawnPositionCounter = 3f;
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -49,9 +49,11 @@ public class GameController : MonoBehaviour
     }
     public void CounterTouch()
     {
+        print("0");
         touch++;
         if (touch == 2)
         {
+            print("1");
             touch = 0;
             box_Spawner.SpawnBox();
             moveCount++;
@@ -61,7 +63,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            print("End");
+            textCounterUI.printEnd();
         }
     }
 }

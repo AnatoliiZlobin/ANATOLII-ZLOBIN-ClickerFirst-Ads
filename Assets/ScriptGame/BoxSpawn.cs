@@ -10,5 +10,6 @@ public class BoxSpawn : MonoBehaviour
     {
         GameObject box_Obj = Instantiate(box_Prfab);
         box_Obj.transform.position = transform.position;
+        print("2");
     }
 }
