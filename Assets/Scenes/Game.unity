@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -849,6 +849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250d634cb70444f40927b2e095398061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  box: {fileID: 6440165755411842640}
   mainCamera: {fileID: 1830769979}
   box_Spawner: {fileID: 1905785925}
   textCounterUI: {fileID: 444850881}
@@ -1011,6 +1012,11 @@ Transform:
   m_Father: {fileID: 1089656562}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1434617053 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3446561278338596071, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+  m_PrefabInstance: {fileID: 6440165755411842639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435158420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box_Prfab: {fileID: 3446561278338596071, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+  box_Obj: {fileID: 0}
 --- !u!1 &1922992224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,9 +1601,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6440165755120969652, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
     - target: {fileID: 3446561278338596069, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 1434617053}
+    - target: {fileID: 3446561278338596069, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
       propertyPath: someclass
       value: 
       objectReference: {fileID: 1089656563}
+    - target: {fileID: 3446561278338596069, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+      propertyPath: detectTouch
+      value: 
+      objectReference: {fileID: 1089656564}
+    - target: {fileID: 3446561278338596069, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+      propertyPath: myScriptTouch
+      value: 
+      objectReference: {fileID: 6440165755411842640}
+    - target: {fileID: 3446561278338596069, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+      propertyPath: scriptBoxSpawn
+      value: 
+      objectReference: {fileID: 1905785925}
+    - target: {fileID: 3446561278338596075, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+      propertyPath: box_Obj
+      value: 
+      objectReference: {fileID: 1434617053}
     - target: {fileID: 6440165755120969648, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
       propertyPath: spawnBox
       value: 
@@ -1651,3 +1678,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+--- !u!114 &6440165755411842640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3446561278338596069, guid: 11cb81907d63f32448cae51b6b31c245, type: 3}
+  m_PrefabInstance: {fileID: 6440165755411842639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434617053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce592ffb9e9abb46a971cff9fe017e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

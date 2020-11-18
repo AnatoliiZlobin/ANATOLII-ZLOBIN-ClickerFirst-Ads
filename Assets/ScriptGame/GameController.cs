@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] BoxTouch box;
     public static GameController instance;
     public GameObject mainCamera;
     public BoxSpawn box_Spawner;
@@ -47,7 +48,7 @@ public class GameController : MonoBehaviour
             box_Spawner.transform.position = new Vector2(0, spawnPositionCounter += 2f);
         }
     }
-    public void CounterTouch()
+    public void CounterTouch(GameObject boxCall)
     {
         touch++;
         if (touch == 2)
@@ -55,13 +56,14 @@ public class GameController : MonoBehaviour
             touch = 0;
             box_Spawner.SpawnBox();
             moveCount++;
+            Destroy(boxCall.GetComponent<BoxTouch>());
+            boxCall.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
         else if (touch == 1)
         {
         }
         else
         {
-            //textCounterUI.printEnd();
         }
     }
 }

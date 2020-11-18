@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class BoxTouch : MonoBehaviour
 {
-    public GameController someclass;
+    [SerializeField] GameController someclass;
+    GameObject box1;
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+
         if (collision.gameObject.CompareTag("Box"))
         {
-            GameController.instance.CounterTouch();
+            box1 = gameObject;
+            GameController.instance.CounterTouch(box1);
         }
-
     }
 }

@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class BoxCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void searchObjectWithTagBox()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject[] findObject;
+        findObject = GameObject.FindGameObjectsWithTag("Box");
+        for (int i = 0; i < findObject.Length; i++)
+        {
+            //if (findObject[i].GetComponent<Rigidbody2D>().gravityScale != 0f)
+            //{
+                //findObject[i].GetComponent<Rigidbody2D>().isKinematic = false;
+                //Destroy(findObject[i].GetComponent<BoxTouch>());
+                print(findObject[i]);
+            //}
+        }
     }
 }
