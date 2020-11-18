@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class DetectTouch : MonoBehaviour
 {
     public bool ifEndGame = false;
@@ -14,7 +14,7 @@ public class DetectTouch : MonoBehaviour
         }
         else if (ifEndGame == true)
         {
-            print("End");
+            SceneManager.LoadScene("Scenes/End");
         }
     }
 }
