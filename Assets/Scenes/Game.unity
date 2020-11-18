@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dae2b2a00872cb4b9ebb7668793ed2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt: {fileID: 1953732201}
 --- !u!114 &444850882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,6 +1449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dae2b2a00872cb4b9ebb7668793ed2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt: {fileID: 0}
 --- !u!114 &1953732201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,7 +1503,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535

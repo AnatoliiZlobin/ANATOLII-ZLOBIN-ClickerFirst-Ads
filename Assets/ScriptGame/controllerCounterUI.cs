@@ -1,18 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class controllerCounterUI : MonoBehaviour
 {
+    public TMP_Text txt;
+
     public void printCounterUI()
     {
-        GetComponent<Text>().text = "x" + GameController.instance.counterPlayerDropBoxUI;
-    }
-    public void printEnd()
-    {
-        print("End");
-        GetComponent<Text>().text = "END";
+        txt.text = "x" + GameController.instance.counterPlayerDropBoxUI;
     }
 }

@@ -49,11 +49,9 @@ public class GameController : MonoBehaviour
     }
     public void CounterTouch()
     {
-        print("0");
         touch++;
         if (touch == 2)
         {
-            print("1");
             touch = 0;
             box_Spawner.SpawnBox();
             moveCount++;
@@ -63,7 +61,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            textCounterUI.printEnd();
+            //textCounterUI.printEnd();
         }
     }
 }
